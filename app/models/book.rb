@@ -1,4 +1,5 @@
 class Book < ApplicationRecord
+  before_action :authenticate_user!
   belongs_to :user
   has_one_attached :profile_image
 
